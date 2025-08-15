@@ -5,7 +5,7 @@ import seaborn as sns
 from scipy.stats import shapiro, normaltest, norm
 
 # Wczytanie pliku
-df = pd.read_csv("data.csv")
+df = pd.read_csv("../data.csv")
 
 col ="Driver Ratings"
 data = df[col].dropna()
