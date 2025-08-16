@@ -16,10 +16,10 @@ values = flow_counts['count']
 
 fig = go.Figure(data=[go.Sankey(
     node=dict(
-        pad=20,                # odstęp między węzłami
-        thickness=20,          # grubość węzłów
+        pad=20,
+        thickness=20,
         line=dict(color="black", width=0.5),
-        label=locations,       # etykiety węzłów
+        label=locations,
         color="lightblue"
     ),
     link=dict(
