@@ -18,6 +18,16 @@ X = X.replace([np.inf, -np.inf], np.nan).dropna()
 y = y[X.index]
 
 
+#Wyznaczamy korelację
+corr = df['Customer Rating'].corr(df['Driver Ratings'])
+print(corr)
+
+if corr < 0.3 :
+    decision = input("Korelacja zbyt niska, czy kontynuować? t ? n")
+    if decision == "n" :
+        exit(0)
+
+
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 model = LinearRegression()
