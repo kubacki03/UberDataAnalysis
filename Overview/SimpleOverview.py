@@ -1,8 +1,7 @@
 
 import pandas as pd
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
-
 # Wczytanie pliku
 df = pd.read_csv("../data.csv")
 
@@ -36,8 +35,6 @@ print("Łącznie anulowano kursów "+str(df["Reason for cancelling by Customer"]
 print(customer_canceled)
 print(driver_canceled)
 
-import matplotlib.pyplot as plt
-from matplotlib.ticker import MultipleLocator
 
 # Wykres słupkowy dla anulacji przez klienta
 plt.figure(figsize=(8, 5))
@@ -47,7 +44,6 @@ plt.xlabel("Powód anulacji")
 plt.ylabel("Liczba kursów")
 plt.xticks(rotation=45, ha='right')
 
-# Skala co 200
 plt.gca().yaxis.set_major_locator(MultipleLocator(200))
 
 plt.tight_layout()
@@ -61,7 +57,6 @@ plt.xlabel("Powód anulacji")
 plt.ylabel("Liczba kursów")
 plt.xticks(rotation=45, ha='right')
 
-# Skala co 200
 plt.gca().yaxis.set_major_locator(MultipleLocator(500))
 
 plt.tight_layout()

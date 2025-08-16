@@ -14,6 +14,7 @@ procent_pustych_wierszy = (df.isnull().any(axis=1).sum() / len(df)) * 100
 print(f"{procent_pustych_wierszy:.2f}% wierszy ma co najmniej jedną pustą komórkę")
 
 
+
 #Wyznaczenie najcześćiej nullowej kolumny
 najczesciej_pusta = df.isnull().sum().idxmax()
 liczba_pustych = df.isnull().sum().max()
